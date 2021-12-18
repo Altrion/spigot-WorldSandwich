@@ -1,0 +1,8 @@
+Worlds:
+  world:
+    TopExit: 255
+    BottomExit: 0
+    WorldAbove: world_the_end
+    WorldAbove_Position: 0
+    WorldBelow: world_nether
+    WorldBelow_Position: 150

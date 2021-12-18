@@ -1,0 +1,8 @@
+main:  io.github.Altrion.worldsandwich.WorldSandwich
+author: IsMILAN
+name: WorldSandwich
+website: https://github.com/Altrion/spigot-WorldSandwich
+description: Links top/bottom of worlds toghther.
+api-version: 1.13
+version: 1.0
+softdepend: ['multiverse-Core']
