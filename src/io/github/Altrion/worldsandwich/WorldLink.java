@@ -12,9 +12,7 @@ public class WorldLink {
 
     public int worldTop_padding;
     public int worldBottom_padding;
-    public WorldLink() {
-
-    }
+    public WorldLink() {}
     public WorldLink(Integer bottomExit, Integer topExit, UUID topWorld, UUID bottomWorld) {
         _bottomExit=bottomExit;
         _topExit=topExit;
