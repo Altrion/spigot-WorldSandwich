@@ -4,5 +4,5 @@ name: WorldSandwich
 website: https://github.com/Altrion/spigot-WorldSandwich
 description: Links top/bottom of worlds toghther.
 api-version: 1.13
-version: 1.0
+version: 1.1
 softdepend: ['multiverse-Core']

@@ -1,23 +1,23 @@
 package io.github.Altrion.worldsandwich;
 
-import org.bukkit.World;
-
 import java.util.UUID;
 
 public class WorldLink {
-    public Integer _bottomExit;
-    public Integer _topExit;
+
+    public boolean TOP_groundTeleport;
+        public boolean TOP_notOnFlight;
+    public boolean TOP_disableFallDamage;
+
+    public boolean BOT_groundTeleport;
+        public boolean BOT_notOnFlight;
+    public boolean BOT_disableFallDamage;
+    public int TOP_FireRes;
+    public int BOT_FireRes;
+    public Integer _bottomExit=0;
+    public Integer _topExit=256;
     public UUID _topWorld;
     public UUID _bottomWorld;
 
-    public int worldTop_padding;
-    public int worldBottom_padding;
-    public WorldLink() {}
-    public WorldLink(Integer bottomExit, Integer topExit, UUID topWorld, UUID bottomWorld) {
-        _bottomExit=bottomExit;
-        _topExit=topExit;
-        _topWorld=topWorld;
-        _bottomWorld=bottomWorld;
-    }
-
+    public int worldTop_padding=0;
+    public int worldBottom_padding=255;
 }

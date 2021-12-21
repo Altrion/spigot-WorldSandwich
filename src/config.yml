@@ -1,8 +1,63 @@
 Worlds:
+  # worlds list, example: world,world_the_end,world_nether...
   world:
-    TopExit: 255
-    BottomExit: 0
-    WorldAbove: world_the_end
-    WorldAbove_Position: 0
-    WorldBelow: world_nether
-    WorldBelow_Position: 150
+
+    # where exit is on top of this world... (player gets teleported to "WorldAbove" if hes above it.)
+    TopExit: 257
+    # where exit is on the bottom of this world... (player gets teleported to "WorldBelow" if hes below it.)
+    BottomExit: -10
+
+    # world above this one...
+    WorldAbove:
+      # World above name. plugin uses this for finding worlds.
+      WorldName: world_the_end
+      # at what Y level to set player position when he enters worldAbove.
+      TeleportPosition: 10
+
+      SafeTeleport:
+        # Should player be teleported to ground if he enters worldAbove, (ground = top block at those cords)
+        # (overrides TeleportPosition, making that field ignored)
+        GroundTeleport: true
+        # Should player not be teleported on ground if he is flying? (Teleported flying player to TeleportPosition instead)
+        NotOnFlight: true
+        # Should player be give fire resistance if block below his teleport position is lava? (in seconds, 0 = disabled)
+        LavaBelowFireRes: 0
+        # No fall damage ( this makes player immune once to fall damage ) ( this immunity is disabled one player takes any damage )
+        DisableFallDamage: false
+
+    # World below this one...
+    WorldBelow:
+      # World below name. plugin uses this for finding worlds.
+      WorldName: world_nether
+      # at what Y level to set player position when he enters worldBelow.
+      TeleportPosition: 128
+
+      SafeTeleport:
+        # Should player be teleported to ground if he enters worldBelow, (ground = top block at those cords)
+        # (overrides TeleportPosition, making that field ignored)
+        GroundTeleport: true
+        # Should player not be teleported on ground if he is flying? (Teleported flying player to TeleportPosition instead)
+        NotOnFlight: true
+        # Should player be give fire resistance if block below his teleport position is lava? (in seconds, 0 = disabled)
+        LavaBelowFireRes: 15
+        # No fall damage ( this makes player immune once to fall damage ) ( this immunity is disabled one player takes any damage )
+        DisableFallDamage: false
+
+  world_the_end:
+    BottomExit: -5
+    WorldBelow:
+      WorldName: world
+      TeleportPosition: 256
+      SafeTeleport:
+        DisableFallDamage: true
+        LavaBelowFireRes: 10
+  world_nether:
+    TopExit: 130
+    WorldAbove:
+      WorldName: world
+      TeleportPosition: 0
+      SafeTeleport:
+        LavaBelowFireRes: 7
+        GroundTeleport: true
+# do not edit this, its used for checking config version by plugin.
+configVersion: 1
